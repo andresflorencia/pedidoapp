@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">SI Pido</string>
+    <string name="selectEmpresa">Tiendas disponibles</string>
+    <string name="continua">Continuar</string>
+    <string name="anadir">Añadir</string>
+    <string name="update">Actualizar</string>
+    <string name="procede_direccion">Continuar con el envío</string>
+    <string name="confirm_pedido">Confirmar pedido</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="forgot_password">¿Olvidó su contraseña?</string>
+    <string name="forgot_password2">Recuperar contraseña</string>
+    <string name="forgot">Recuperar</string>
+    <string name="change_password">Cambiar contraseña</string>
+    <string name="leyenda_nuevo">No tengo una cuenta</string>
+    <string name="tengo_cuenta">Ya tengo una cuenta</string>
+    <string name="new_user"><ul>Registrarme</ul></string>
+    <string name="cart_shop">Lista de productos</string>
+    <string name="profile">Perfil</string>
+    <string name="informacion_personal">Información Personal</string>
+    <string name="direcciones">Direcciones</string>
+    <string name="email_empty">Especifique el email o usuario</string>
+    <string name="password_empty">Especifique la contraseña</string>
+    <string name="cancel">Cancelar</string>
+    <string name="accept">Aceptar</string>
+    <string name="settings">Ajustes</string>
+    <string name="loading">Cargando. Espere un momento...</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="observation">Observación del pedido</string>
+    <string name="dato_adicional">Datos adicionales</string>
+    <string name="resumen_pedido">Resumen del pedido</string>
+    <string name="number_contact">Número de contacto</string>
+    <string name="confirm_pedido2">Confirmación de pedido</string>
+    <string name="item_add">Ítem añadido al carrito</string>
+    <string name="item_update">Se actualizó la cantidad del ítem.</string>
+    <string name="item_added">Este ítem ya se encuentra añadido.</string>
+    <string name="item_delete">Ítem eliminado del carrito</string>
+    <string name="address_save">Dirección guardada correctamente</string>
+    <string name="see_detail">Ver detalle</string>
+    <string name="history_pedido">Historial de pedidos</string>
+    <string name="leyenda_confirma">Al confirmar el pedido, la tienda se pondrá en contacto contigo para coordinar la entrega y la disponibilidad de los productos solicitados.</string>
+    <string name="leyenda_direccion">Si deseas especificar una nueva dirección, ve a tu perfil y agrega una nueva.</string>
+    <string name="leyenda_image">Imagen generada desde SI Pido.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+
+    <!--SCRIPT DE LAS TABLAS DE LA BD LOCAL-->
+    <string name="dbProvincia">
+        CREATE TABLE IF NOT EXISTS provincia(
+            idprovincia integer,
+            nombreprovincia varchar(100),
+            CONSTRAINT ukprovincia UNIQUE(idprovincia)
+        );
+    </string>
+    <string name="dbCanton">
+        CREATE TABLE IF NOT EXISTS canton(
+            idcanton integer,
+            nombrecanton varchar(100),
+            provinciaid integer,
+            CONSTRAINT ukcanton UNIQUE(idcanton)
+        );
+    </string>
+    <string name="dbParroquia">
+        CREATE TABLE IF NOT EXISTS parroquia(
+            idparroquia integer,
+            nombreparroquia varchar(100),
+            cantonid integer,
+            CONSTRAINT ukparroquia UNIQUE(idparroquia)
+        );
+    </string>
+</resources>

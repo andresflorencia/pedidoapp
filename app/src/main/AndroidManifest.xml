@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.florencia.pedidossi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_icontest"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_icontest_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CarritoApp"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.InfoHistoryActivity"></activity>
+        <activity android:name=".activities.HistoryActivity" />
+        <activity android:name=".activities.DirectionActivity" />
+        <activity android:name=".activities.EnvioPedidoActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.ChangePasswordActivity" />
+        <activity android:name=".activities.ForgotPasswordActivity" />
+        <activity android:name=".activities.RegistroActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.CarritoActivity" />
+        <activity android:name=".activities.ProductoActivity" />
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.services.GenericFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

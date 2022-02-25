@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/white"
+    app:elevation="0dp"
+    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <ImageButton
+        android:id="@+id/toolbarReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@null"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:src="@drawable/ic_arrow_left"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titulo"
+            android:textColor="@color/principal"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/toolbarSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empresa"
+            android:textColor="@color/principal"
+            android:textSize="13sp"
+            android:visibility="gone"
+            android:drawableLeft="@drawable/ic_store"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/lyToolbarCarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/toolbarSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@id/toolbarCarrito"
+            android:layout_marginRight="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_search"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/toolbarCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:src="@drawable/ic_shop_black" />
+
+        <TextView
+            android:id="@+id/toolbarIndicador"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/indicador"
+            android:paddingTop="3dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/yellow"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>
